@@ -1,0 +1,9 @@
+div {
+    background-color: #1bbc9b;
+    color: white;
+}
+
+div .principal {
+    font-size: 50px;
+    color: white;
+}
