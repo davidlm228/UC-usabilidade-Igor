@@ -1,14 +1,8 @@
 <body class="pagina">
-
-
   <app-cabecalho></app-cabecalho>
-
   <main>
-    <app-book-insert (bookAdded)='onBookAdded($event)'>
-    </app-book-insert>
+    <app-book-insert></app-book-insert>
 
-    <app-book-list [books]="books">
-    </app-book-list>
+    <app-book-list></app-book-list>
   </main>
-
 </body>
