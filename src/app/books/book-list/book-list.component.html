@@ -1,10 +1,8 @@
 <mat-accordion *ngIf="books.length > 0">
 
-  <mat-expansion-panel *ngFor='let book of books'>
+  <mat-expansion-panel style="margin-top: 1rem;" *ngFor='let book of books'>
 
-    <mat-expansion-panel-header>
-      Titulo: {{ book.titulo }}
-    </mat-expansion-panel-header>
+    <mat-expansion-panel-header>Titulo: {{ book.titulo }}</mat-expansion-panel-header>
 
     <p>Id: {{ book.id }}</p>
     <p>Autor: {{ book.autor }}</p>
@@ -14,6 +12,6 @@
 
 </mat-accordion>
 
-<p *ngIf="books.length <= 0">
-  Nenhum livro cadastrado!
+<p class="mat-body-1" style="text-align: center;" *ngIf="books.length <= 0">
+  Nenhum cliente cadastrado
 </p>

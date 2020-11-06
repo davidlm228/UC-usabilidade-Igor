@@ -18,17 +18,15 @@ export class BookListComponent implements OnInit, OnDestroy {
   books: Book[] = [];
   private booksSubscription: Subscription;
 
-  constructor(public bookService: BookService) {
-
-  }
+  constructor(public bookService: BookService) {}
 
   ngOnInit(): void {
-    this.books = this.bookService.getBooks();
+    this.bookService.getBooks();
     this.booksSubscription = this.bookService
-      .getListOfBooksAttObservable()
-      .subscribe((books: Book[]) => {
-        this.books = books;
-      });
+    .getListOfBooksAttObservable()
+    .subscribe((books: Book[]) => {
+      this.books = books;
+    });
   }
 
   ngOnDestroy(): void {
